@@ -1,5 +1,5 @@
 <?php
-interface InstagramDAO{
+interface InstagramDAOInterface{
 //############## User
 
 //1-Cadastrar usuário

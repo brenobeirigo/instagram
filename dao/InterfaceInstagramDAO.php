@@ -2,84 +2,109 @@
 interface InstagramDAOInterface{
 //############## User
 
+    //Vitor OK
 //1-Cadastrar usuário
 public function saveUser($user);
 
+    //Bruno OK
 //2-Ler usuário
-public function getUserById($user_id);
+public function getUserByUserName($user_id);
 
+    //Núbia OK
 //3-Atualizar dados usuário
 public function updateUser($user);
 
+    //Vitor OK
 //4-Remover
 public function removeUserById($user_id);
 
+    //Bruno OK
 //5-Buscar usuários por nome
 public function getUsersByName($user_name);
 
+    //Núbia OK
 //6-Retornar todos os usuários
 public function getAllUsers();
 
+    //Vitor OK
 //7-Usuários cadastrados após data tempo
 public function getAllRegisteredUsersBetween($date1, $date2, $offset, $limit);
 
+    //Bruno OK
 //8-Buscar conteúdo de usuário ordenado por ordem decrescente de criação
 public function getContentOfUser($user, $offset, $limit, $type);
 
+    //Núbia OK
 //9-Buscar conteúdo em que usuário foi marcada em ordem decrescente de marcação
 public function getContentUserTagged($user, $offset, $limit, $type);
 
 //############## Content
 
+    //Vitor OK
 //10-Cadastrar conteúdo
 public function saveContent($content);
 
+    //Bruno OK
 //11-Buscar conteúdo por ID
 public function getContentById($content_id);
 
+    //Núbia OK
 //12-Remover conteúdo
 public function removeContent($content);
 
+    //Vitor OK
 //13-Atualizar contéudo
 public function updateContent($content);
 
-//14 - Buscar todos os usuários que comentaram o conteúdo por ordem decrescente de like
+    //Bruno OK
+//14 - Buscar todos os usuários que comentaram o conteúdo por ordem decrescente de comentario
 public function getListOfCommentators($content, $offset, $limit);
 
+    //Núbia OK
 //15 - Retorna quantidade de usuários que comentaram o contéudo
 public function getNumberOfCommentators($content);
 
 //############## UserLikesContent
 
+    //Vitor OK
 //16-Usuário u curte conteúdo c
 public function like($user, $content);
 
+    //Bruno OK
 //17-Usuário user remove curtida de conteúdo c
 public function unlike($user, $content);
 
+    //Núbia OK
 //18-Buscar todos os contéudos que usuário curtiu em ordem decrescente do tempo de curtida
 public function getListOfLikedContent($user, $type, $offset, $limit);
 
+    //Vitor OK
 //19-Buscar todos os usuários que curtiram o contéudo
 public function getListOfUsersLikedContent($content, $offset, $limit);
 
+    //Bruno OK
 //20-Buscar quantidade de usuários que curtiram conteúdo
 public function getNumberOfUsersLikedContent($content);
 
 //############## UserFollowUser
 
+    //Núbia OK
 //21-Usuário a segue usuário b
 public function follow($a, $b);
 
+    //Vitor OK
 //22-Usuário a parou de seguir usuário b
 public function unfollow($a, $b);
 
+    //Bruno OK
 //23-Buscar todos os seguidores de um usuário u
 public function getFollowersList($user, $offset, $limit);
 
+    //Núbia OK
 //24-Buscar todos usuários que o usuário u segue
 public function getFollowingList($user, $offset, $limit);
 
+    //Vitor OK
 //25-Retorna lista de usuários ordenados por número de seguidores
 public function getMostFollowedUsers($offset, $limit);
 
